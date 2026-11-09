@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Moonwake: Shapeshifter</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="hud-panel">
+        <div class="brand">Moonwake</div>
+        <div class="stats">
+          <span id="formLabel">Human</span>
+          <span id="healthText">HP 100</span>
+          <span id="questText">Quest: Gather the moon-silver relics</span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="900" height="1200" aria-label="Moonwake game canvas"></canvas>
+
+      <div id="overlay" class="overlay visible">
+        <div class="panel">
+          <p class="eyebrow">Fantasy survival</p>
+          <h1 id="overlayTitle">Moonwake</h1>
+          <p id="overlayText">
+            The forest of Ashfen has gone dim. Gather three moon-silver relics,
+            change your body to survive the wild, and defeat the Warden of the Root.
+          </p>
+          <button id="startButton" type="button">Begin the Hunt</button>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="dpad">
+          <button class="control touch-up" data-key="ArrowUp" aria-label="Move up">▲</button>
+          <div class="middle-row">
+            <button class="control touch-left" data-key="ArrowLeft" aria-label="Move left">◀</button>
+            <button class="control touch-down" data-key="ArrowDown" aria-label="Move down">▼</button>
+            <button class="control touch-right" data-key="ArrowRight" aria-label="Move right">▶</button>
+          </div>
+        </div>
+
+        <div class="action-pad">
+          <button class="action" id="attackButton" type="button">Strike</button>
+          <button class="action" id="shiftButton" type="button">Shift</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
